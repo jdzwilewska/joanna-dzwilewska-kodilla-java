@@ -39,10 +39,19 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorNormalList () {
         //Given
         ArrayList<Integer> list = new ArrayList<Integer> ();
-        Random generator = new Random();
-        for (int n = 0; n < 100; n++) {
-            list.add(generator.nextInt(100));
-        }
+        list.add(15);
+        list.add(60);
+        list.add(87);
+        list.add(1);
+        list.add(43);
+        list.add(13);
+        list.add(22);
+        list.add(6);
+        list.add(78);
+        list.add(9);
+        list.add(10);
+        list.add(31);
+
         //When
         OddNumbersExterminator exterminatorTest2 = new OddNumbersExterminator ();
         ArrayList<Integer> newNormal = exterminatorTest2.exterminate(list);
