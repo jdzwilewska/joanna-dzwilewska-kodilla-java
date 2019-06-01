@@ -46,7 +46,8 @@ class ShapeCollector {
     public Shape getFigure (int n) {
         return null;
     }
-    public void showFigure () {
+    public boolean showFigures () {
+        return true;
     }
 
 }
@@ -54,6 +55,12 @@ class ShapeCollector {
 class Application {
     public static void main (String[] args) throws java.lang.Exception {
         ArrayList<Shape> shapes = new ArrayList<Shape>();
+        //Shape circle = new Circle();
+        //Shape triangle = new Triangle();
+        //Shape square= new Square();
+        //shapes.add(circle);
+        //shapes.add(triangle);
+        //shapes.add(square);
         System.out.println(shapes.size());
     }
 }

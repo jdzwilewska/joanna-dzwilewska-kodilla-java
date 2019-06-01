@@ -49,10 +49,33 @@ public class ShapeCollectorTestSuite {
             Assert.assertTrue(result);
         }
         @Test
-        public void TestGetFigure() {
+        public void testGetFigure() {
+            //Given
+            Shape circle = new Circle();
+            ShapeCollector shapecollector = new ShapeCollector(circle);
+            //When
+            Shape retrievedFigure;
+            retrievedFigure = shapecollector.getFigure(0);
+            //Then
+            ArrayList<Shape> shapes = new ArrayList<Shape>();
+            shapes.add(circle);
 
-    }
+            Assert.assertEquals(shapes.get(0), retrievedFigure);
+        }
+        @Test
+        public boolean testShowFigures() {
+            //Given
+            Shape circle = new Circle();
+            ShapeCollector shapecollector = new ShapeCollector(circle);
+            //When
+            boolean result = shapecollector.showFigures();
+            //Then
+            ArrayList<Shape> shapes = new ArrayList<Shape>();
+            shapes.add(circle);
 
+            /* Assert.assertTrue(result); */
+            Assert.assertTrue();
 
-
+        }
 }
+

@@ -55,9 +55,15 @@ public class CollectionTestSuite {
         //When
         OddNumbersExterminator exterminatorTest2 = new OddNumbersExterminator ();
         ArrayList<Integer> newNormal = exterminatorTest2.exterminate(list);
+        ArrayList<Integer> testList = new ArrayList<Integer> ();
+        testList.add(60);
+        testList.add(22);
+        testList.add(6);
+        testList.add(78);
+        testList.add(10);
 
         //Then
-        Assert.assertTrue(list.containsAll(newNormal));
+        Assert.assertEquals(newNormal, testList);
     }
     @After
     public void afterSecond(){
