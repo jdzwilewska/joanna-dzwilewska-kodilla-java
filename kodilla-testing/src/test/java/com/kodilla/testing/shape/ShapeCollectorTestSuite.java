@@ -29,53 +29,41 @@ public class ShapeCollectorTestSuite {
         @Test
         public void testAddFigure() {
             //Given
-            Shape circle = new Circle();
-            ShapeCollector shapecollector = new ShapeCollector(circle);
+            ArrayList<Shape> figures = new ArrayList<Shape>();
+            ShapeCollector shapecollector = new ShapeCollector();
+            Circle circle = new Circle(25.06);
             //When
-            shapecollector.addFigure();
+            shapecollector.addFigure(circle);
             //Then
-            ArrayList<Shape> shapes = new ArrayList<Shape>();
-            Assert.assertEquals(1, shapes.size());
+            Assert.assertEquals(1, figures.size());
         }
         @Test
         public void testRemoveFigure() {
             //Given
-            Shape circle = new Circle();
-            ShapeCollector shapecollector = new ShapeCollector(circle);
+            ArrayList<Shape> figureTest = new ArrayList<Shape>();
+            ShapeCollector shapecollector = new ShapeCollector();
+            Circle circle = new Circle(25.06);
+            figureTest.add(circle);
             //When
             boolean result = shapecollector.removeFigure(circle);
             //Then
-            ArrayList<Shape> shapes = new ArrayList<Shape>();
             Assert.assertTrue(result);
         }
         @Test
         public void testGetFigure() {
             //Given
-            Shape circle = new Circle();
-            ShapeCollector shapecollector = new ShapeCollector(circle);
+            ArrayList<Shape> figureTest = new ArrayList<Shape>();
+            ShapeCollector shapecollector = new ShapeCollector();
+            Circle circle = new Circle(25.06);
+            figureTest.add(circle);
+            Square square = new Square(14.02);
+            figureTest.add(square);
+            Triangle triangle = new Triangle(6.14, 12.78, 23.11);
+            figureTest.add(triangle);
             //When
-            Shape retrievedFigure;
-            retrievedFigure = shapecollector.getFigure(0);
+            Shape result = shapecollector.getFigure(1);
             //Then
-            ArrayList<Shape> shapes = new ArrayList<Shape>();
-            shapes.add(circle);
-
-            Assert.assertEquals(shapes.get(0), retrievedFigure);
-        }
-        @Test
-        public boolean testShowFigures() {
-            //Given
-            Shape circle = new Circle();
-            ShapeCollector shapecollector = new ShapeCollector(circle);
-            //When
-            boolean result = shapecollector.showFigures();
-            //Then
-            ArrayList<Shape> shapes = new ArrayList<Shape>();
-            shapes.add(circle);
-
-            /* Assert.assertTrue(result); */
-            Assert.assertTrue();
-
+            Assert.assertEquals(square, result);
         }
 }
 
