@@ -5,29 +5,54 @@ import java.util.ArrayList;
 
 public class CalculateAdvStatistics {
 
-    private Statistics statistics;
+    private int usrCount;
+    private int postCount;
+    private int commCount;
+    private double avgPostUsr;
+    private double avgCommUser;
+    private double avgCommPost;
 
-
-
-    public CalculateAdvStatistics(Statistics statistics)
-    {
-        this.statistics = statistics;
+    public void calculateAdvStatistics (Statistics statistics ) {
+        usrCount = statistics.usersNames().size();
+        postCount = statistics.postsCount();
+        commCount = statistics.commentsCount();
+        if (usrCount == 0) {
+            avgPostUsr = 0.0;
+        } else {
+            avgPostUsr = postCount / usrCount;
+        }
+        if (usrCount == 0) {
+            avgCommUser = 0.0;
+        } else {
+            avgCommUser = commCount / usrCount;
+        }
+        if (postCount == 0) {
+            avgCommPost = 0.0;
+        } else {
+            avgCommPost = commCount / postCount;
+        }
+    }
+    public int getUsrCount() {
+        return usrCount;
     }
 
-
-    public List<String> usersNames() {
-        List<String> result = new ArrayList<String>();
-    return result ;
-    }
-    public int postsCount() {
-    return 0;
-    }
-    public int commentsCount() {
-    return 0;
-    }
-    public void showStatistics() {
-
+    public int getPostCount() {
+        return postCount;
     }
 
+    public int getCommCount() {
+        return commCount;
+    }
 
+    public double getAvgPostUsr() {
+        return avgPostUsr;
+    }
+
+    public double getAvgCommUser() {
+        return avgCommUser;
+    }
+
+    public double getAvgCommPost() {
+        return avgCommPost;
+    }
 }
