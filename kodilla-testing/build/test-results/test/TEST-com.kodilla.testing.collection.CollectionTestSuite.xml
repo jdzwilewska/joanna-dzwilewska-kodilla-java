@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.collection.CollectionTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-17T17:40:22" hostname="HP-PC" time="0.023">
+  <properties/>
+  <testcase name="testOddNumbersExterminatorEmptyList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.02"/>
+  <testcase name="testOddNumbersExterminatorNormalList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.002"/>
+  <system-out><![CDATA[Przypadek testowy - poczÄ…tek: testOddNumbersExterminatorNormalList()
+Przypadek testowy - poczÄ…tek: testOddNumbersExterminatorEmptyList()
+Przypadek testowy - koniec: testOddNumbersExterminatorNormalList()
+Przypadek testowy - koniec: testOddNumbersExterminatorEmptyList()
+Przypadek testowy - poczÄ…tek: testOddNumbersExterminatorNormalList()
+Przypadek testowy - poczÄ…tek: testOddNumbersExterminatorEmptyList()
+Przypadek testowy - koniec: testOddNumbersExterminatorNormalList()
+Przypadek testowy - koniec: testOddNumbersExterminatorEmptyList()
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

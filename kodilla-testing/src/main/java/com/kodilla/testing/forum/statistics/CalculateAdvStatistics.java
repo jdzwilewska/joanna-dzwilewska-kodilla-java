@@ -19,17 +19,17 @@ public class CalculateAdvStatistics {
         if (usrCount == 0) {
             avgPostUsr = 0.0;
         } else {
-            avgPostUsr = postCount / usrCount;
+            avgPostUsr = ((double) postCount) / usrCount;
         }
         if (usrCount == 0) {
             avgCommUser = 0.0;
         } else {
-            avgCommUser = commCount / usrCount;
+            avgCommUser = ((double) commCount) / usrCount;
         }
         if (postCount == 0) {
             avgCommPost = 0.0;
         } else {
-            avgCommPost = commCount / postCount;
+            avgCommPost = ((double) commCount) / postCount;
         }
     }
     public int getUsrCount() {

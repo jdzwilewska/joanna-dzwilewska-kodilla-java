@@ -8,6 +8,8 @@ import com.kodilla.testing.forum.ForumPost;
 import com.kodilla.testing.forum.ForumTestSuite;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import org.mockito.BDDMockito;
@@ -33,10 +35,12 @@ public class CalculateAdvStatisticsWithMock {
         Statistics statisticsMock = mock(Statistics.class);
         CalculateAdvStatistics calculateAdvStatistics = new CalculateAdvStatistics();
         when(statisticsMock.postsCount()).thenReturn(1000);
+        when(statisticsMock.usersNames()).thenReturn(Arrays.asList("user1", "user2", "user3"));
         //When
         calculateAdvStatistics.calculateAdvStatistics(statisticsMock);
+
         //Then
-        Assert.assertEquals(1000.0, calculateAdvStatistics.getAvgPostUsr(),0.01);
+        Assert.assertEquals(333.33, calculateAdvStatistics.getAvgPostUsr(), 0.01);
     }
     @Test
     public void testCalculateAdvStatisticsWhenCommCountIsZero() {
@@ -59,7 +63,7 @@ public class CalculateAdvStatisticsWithMock {
         //When
         calculateAdvStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        Assert.assertTrue(calculateAdvStatistics.getAvgCommUser() < calculateAdvStatistics.getAvgPostUsr());
+        Assert.assertEquals(0.75,  calculateAdvStatistics.getAvgCommPost(), 0.01);
     }
     @Test
     public void testCalculateAdvStatisticsWhenCommCountGreaterThanPostCount() {
@@ -71,7 +75,7 @@ public class CalculateAdvStatisticsWithMock {
         //When
         calculateAdvStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        Assert.assertTrue(calculateAdvStatistics.getAvgCommUser() > calculateAdvStatistics.getAvgPostUsr());
+        Assert.assertEquals(1.33,  calculateAdvStatistics.getAvgCommPost(), 0.01);
     }
     @Test
     public void testCalculateAdvStatisticsWhenUsrCountIsZero(){
