@@ -1,5 +1,7 @@
 package com.kodilla.stream.immutable;
 
+//Zadanie 7.2
+
 import java.util.stream.*;
 
 public final class ForumUser {
