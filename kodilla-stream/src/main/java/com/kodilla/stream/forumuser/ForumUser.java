@@ -37,6 +37,10 @@ public final class ForumUser {
         return postCount;
     }
 
+    public LocalDate getDateNow() {
+        return LocalDate.now();
+        }
+    LocalDate now = LocalDate.now();
     @Override
     public String toString() {
         return "ForumUser{" +
